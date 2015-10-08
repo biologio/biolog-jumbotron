@@ -12,8 +12,8 @@ Package.onUse(function(api) {
   api.use([
     'telescope:core@0.25.0',
     'perak:codemirror@1.2.7',
-    'semantic:ui-sidebar',
-    'semantic:ui-card'
+    'semantic:ui-sidebar@2.1.4',
+    'semantic:ui-card@2.1.4'
   ]);
 
   api.imply('perak:codemirror@1.2.7');
