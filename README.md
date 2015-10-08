@@ -2,7 +2,7 @@
 
 A simple plugin that lets you add a configurable [Jumbotron][2] and nicely show categories as card UI with their sub-categories to your [Telescope][1] site.  
 
-Example: http://invent.healthcare.meteor.com/ (you get exactly what you see there simply by adding this package)
+Example: http://invent.healthcare.meteor.com/
 
 
 ## Install

@@ -1,7 +1,7 @@
 Package.describe({
   name: 'decent10cs:telescope-jumbotron',
   summary: 'A configurable Jumbotron for Telescope.',
-  version: '0.0.9',
+  version: '0.0.95',
   git: 'https://github.com/biologio/biolog-jumbotron.git'
 });
 
@@ -13,7 +13,8 @@ Package.onUse(function(api) {
     'telescope:core@0.25.0',
     'perak:codemirror@1.2.7',
     'semantic:ui-sidebar@2.1.4',
-    'semantic:ui-card@2.1.4'
+    'semantic:ui-card@2.1.4',
+    'cwaring:modernizr@3.0.0_1'
   ]);
 
   api.imply('perak:codemirror@1.2.7');
