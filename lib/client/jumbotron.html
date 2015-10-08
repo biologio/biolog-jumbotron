@@ -11,12 +11,15 @@
         <section class="jumbotron" style="background-image: url('{{image}}')">
             <div class="jumbotron-inner">
                 <div class="copy">
+                    <h1>
                     {{#if titleImage}}
                     <img src="{{titleImage}}" alt="{{title}}">
                     {{else}}
                      {{title}}
                     {{/if}}
+                </h1>
                     <h3>{{subheading}}</h3> {{{extraHtml}}}
+
                 </div>
             </div>
         </section>
