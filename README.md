@@ -13,8 +13,8 @@ meteor add decent10cs:telescope-jumbotron
 
 ## Quick Start
 	1. Login as admin
-  	2. Go to http://www.yoursite/admin/settings click on categories menu shows in right side of the page or just type  http://www.yoursite/admin/categories url
-  	3. Create new category and make sure to checked `trending` checbox if you want to show the category on main screen, Incase of old category  check the trending property and submit.
+  	2. Go to http://www.yoursite/admin/settings click on categories link shows in right side of the page or just type  http://www.yoursite/admin/categories url
+  	3. Create new category and make sure to checked `trending` checbox if you want to show the category on main screen. Incase of old category  check the trending property and submit.
   
 ## Customization
 
