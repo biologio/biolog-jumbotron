@@ -7,7 +7,12 @@
                   <div class="image">
                     <img src="{{image}}">
                     <div class="overlay-image">
-                        <a href="/submit" class="expand">  {{tagline}}</a>
+                        <a href="/submit" class="expand">  {{#if tagline}}
+                        {{tagline}}
+                        {{else}}
+                        Post {{name}}
+                        {{/if}}
+                        </a>
                         <a class="close-overlay hidden">x</a>
                     </div>
                 </div>
