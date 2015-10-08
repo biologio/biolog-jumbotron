@@ -1,0 +1,38 @@
+<template name="categories">
+    <div class="categories">
+        <div class="ui link three doubling stackable cards " id="cardList">
+            {{#each categoriesList}}
+            <div class="card">
+              {{#if image}}
+                  <div class="image">
+                    <img src="{{image}}">
+                    <div class="overlay-image">
+                        <a href="/submit" class="expand">  {{tagline}}</a>
+                        <a class="close-overlay hidden">x</a>
+                    </div>
+                </div>
+              {{/if}}
+                <div class="content">
+                    <a href="/?cat={{slug}}" class="header category">{{name}}</a>
+                    <div class="meta">
+                        {{#each subCategories}}
+                        <a href="/?cat={{slug}}" class="ui mini blue label">{{name}}</a> {{/each}}
+                    </div>
+                    <div class="description">
+                        {{description}}
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+        <!-- Joined in 2013 -->
+      </span>
+                    <span>
+       
+        {{{showPostCount post}}}
+      </span>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</template>

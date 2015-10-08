@@ -1,0 +1,437 @@
+body {
+    overflow-x: hidden;
+}
+
+
+/*
+http://cloudline.io.s3.amazonaws.com/images/outer-space-hd-wallpaper.jpg
+*/
+
+.jumbotron-container {
+    position: relative;
+    .sidebar-toggle {
+        position: absolute;
+        top: 1rem;
+        right: -.3rem;
+        display: flex;
+        width: 40px;
+        background-color: #fff;
+        height: 30px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+        z-index: 100;
+        &:hover {
+            cursor: pointer;
+            color: #61CAEE;
+        }
+    }
+}
+
+.jumbotron {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    width: 100%;
+    display: block;
+    overflow-x: none;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .35);
+    margin: -10px 0 40px 0;
+    .jumbotron-inner {
+        position: relative;
+    }
+    .copy {
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        height: 10em;
+        padding: 0 20px;
+        color: #fff;
+        text-align: center;
+        @media screen and (max-width: 40em) {
+            top: 10%;
+        }
+        h1 {
+            font-size: 4em;
+            line-height: 1;
+        }
+        h3 {
+            font-size: 2em;
+            font-weight: normal;
+        }
+    }
+}
+
+// Code editor text field
+.CodeMirror {
+    height: 175px;
+    line-height: 1.3;
+    border: 1px solid #b5b0b0;
+    padding: 3px;
+}
+
+// Hero on/off switch
+$toggle-height: 30px;
+$toggle-width: 60px;
+$switch-size: 30px;
+$anim-slight-bounce: cubic-bezier(0.34, 1.61, 0.7, 1);
+$anim-speed-normal: 400ms;
+$border-color: #dadde1;
+$switch-bg: #2da86c;
+.hero-switch {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tgl {
+    position: relative;
+    margin: 0 15px 10px;
+    display: inline-block;
+    height: $toggle-height;
+    cursor: pointer;
+    > input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        visibility: hidden;
+    }
+    .tgl_body {
+        width: $toggle-width;
+        height: $toggle-height;
+        background: white;
+        border: 1px solid $border-color;
+        display: inline-block;
+        position: relative;
+        border-radius: 50px;
+    }
+    .tgl_switch {
+        width: $toggle-height;
+        height: $toggle-height;
+        display: inline-block;
+        background-color: white;
+        position: absolute;
+        left: -1px;
+        top: -1px;
+        border-radius: 50%;
+        border: 1px solid darken($border-color, 5%);
+        box-shadow: 0 2px 2px rgba(0, 0, 0, .13);
+        transition: left $anim-slight-bounce $anim-speed-normal, transform $anim-slight-bounce $anim-speed-normal;
+        z-index: 1;
+    }
+    .tgl_track {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        border-radius: 50px;
+    }
+    .tgl_bgd {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: $toggle-width - ($switch-size / 2) + 10; // compensates for animation bounce
+        transition: left $anim-slight-bounce $anim-speed-normal, right $anim-slight-bounce $anim-speed-normal;
+        right: auto;
+        left: -($toggle-width - ($switch-size / 2));
+        background: white;
+    }
+    .tgl_bgd-on {
+        right: -10px; // compensates for animation bounce
+        background: $switch-bg;
+    }
+    &:hover {
+        .tgl_switch {
+            border-color: darken($border-color, 13%);
+            transform: scale(1.06);
+        }
+    }
+    &:active {
+        .tgl_switch {
+            transform: scale(.95);
+        }
+    }
+    > .on ~ .tgl_body {
+        > .tgl_switch {
+            left: $toggle-width - $switch-size;
+        }
+        .tgl_bgd {
+            right: -($toggle-width - ($switch-size / 2));
+            &.tgl_bgd-on {
+                right: auto;
+                left: -10px;
+            }
+        }
+    }
+}
+
+
+/* Sample styles for HTML above */
+.sidebar-jumbotron-settings{
+    padding:1rem;
+    h4{
+    text-align:center;
+    }
+}
+
+.categories {
+    margin-top: -40px;
+    background-color: transparent;
+    margin-bottom: 1rem;
+    border-bottom: solid 7px #32CBFD;
+    padding-bottom: 10px;
+    .ui.cards > .card,
+    .ui.card {
+        box-shadow: none;
+        border-radius: 0;
+        transition: all .25s;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        &:hover {
+            border: none !important;
+            box-shadow: none !important;
+        }
+        .image {
+            border-radius: 0 !important;
+        }
+        .content .header {
+            padding: 0;
+            box-shadow: none;
+            height: auto;
+            margin-bottom: 1rem;
+            font-weight: normal;
+            font-size: 1.4rem;
+            background-color: transparent;
+        }
+        a.ui.label {
+            cursor: pointer;
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+        .label.blue {
+            background-color: #2EBAE8 !important;
+            border-color: rgba(88, 203, 241, 0.72) !important;
+            &:hover {
+                background-color: #0AB5EC !important;
+                border-color: #07A3D6 !important;
+            }
+        }
+        .extra,
+        .extra .extra {
+            color: #0666B3;
+             .detail{
+             margin-left:0;
+             }
+        }
+    }
+}
+
+.jumbotron {
+    overflow: none;
+    margin-bottom: 0;
+}
+
+.jumbotron .copy .button {
+
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 300;
+    margin: 1rem auto;
+    -webkit-transition: background 1s;
+    transition: background 1s;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    line-height: 1;
+    width: 240px;
+    cursor: pointer;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    font-weight: 400;
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0);
+    -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+}
+
+.jumbotron .copy {
+    top: 18%;
+}
+
+.jumbotron .copy .button:hover {
+    color: #fff;
+}
+
+.jumbotron .learn-more {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+
+
+.jumbotron .learn-more a {
+    outline: none;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.jumbotron .jumbotron-inner {
+    background: rgba(0, 0, 0, 0.1);
+    position: relative;
+    min-height: 350px !important;
+}
+
+.post-vote .downvote-link,
+.post-vote .upvote-link {
+    color: #000;
+}
+
+.jumbotron .copy .button {
+    margin: 1rem auto;
+    background-color: rgba(33, 133, 210, 0.38); 
+    border: none;
+    &:hover {
+        background-color: rgba(30, 124, 197, 0.85) ;
+       
+       
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.card .image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card .image img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.overlay-image {
+    display: block;
+    position: absolute;
+    z-index: 20;
+    background: rgba(50, 180, 226, 0.25);
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+a.close-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 45px;
+    text-align: center;
+    background-color: #000;
+    cursor: pointer;
+}
+
+a.close-overlay.hidden {
+    display: none;
+}
+
+a.expand {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    border: solid 3px rgba(30,124,197,1);
+    text-align: center;
+    color: #fff;
+    line-height: 1;
+    font-weight: normal;
+    font-size: 24px;
+    border-radius: 30px;
+    background: rgba(30,124,197,0.85);
+    color: #fff;
+}
+
+#cardList {
+    .overlay-image {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        a.expand {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+            border-radius: 0;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+    }
+    .image.hover {
+        .overlay-image {
+            opacity: 1;
+            a.expand {
+                width: 70%;
+                height: 50px;
+                padding: 10px;
+                -webkit-border-radius: 30px;
+                -moz-border-radius: 30px;
+                -ms-border-radius: 30px;
+                -o-border-radius: 30px;
+                border-radius: 30px;
+                font-weight: normal;
+                &:hover {
+                    color: #fff;
+                    border-color: rgba(30,124,197,0.95);
+                }
+            }
+        }
+    }
+}
+.form-group{
+    label.control-label{
+    float:none;
+    }
+}
+.ui.cards {
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.floated.right{
+    float:right
+    
+}

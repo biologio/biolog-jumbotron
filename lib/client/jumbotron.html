@@ -1,0 +1,49 @@
+<template name="jumbotron">
+    <div class="jumbotron-container">
+        {{#if showJumbotron}} {{#with jumbotronData}}
+        <style type="text/css">
+        {
+            {
+                extraCss
+            }
+        }
+        </style>
+        <section class="jumbotron" style="background-image: url('{{image}}')">
+            <div class="jumbotron-inner">
+                <div class="copy">
+                    <h1>{{title}}</h1>
+                    <h3>{{subheading}}</h3> {{{extraHtml}}}
+                </div>
+            </div>
+        </section>
+        {{>categories}} {{/with}} {{/if}} {{#if isAdmin}}
+        <span class="fa fa-chevron-left  sidebar-toggle"></span> {{/if}}
+    </div>
+</template>
+<template name="jumbotron_config_overlay">
+    <div class="ui right  sidebar vertical  menu very wide sidebar-jumbotron-settings ">
+        <!--  <a class="hero-config-toggle" href="#">&#10094;</a> -->
+        <h4>Jumbotron Settings</h4> {{#if Template.subscriptionsReady}} {{#autoForm collection="JumbotronSettings" id="updateJumbotronForm" type="update" doc=jumbotronSettings}}
+        <div class="hero-switch">
+            <label class="tgl">
+                <input type="checkbox" class="{{switchState}}" id="onHandel" />
+                <span class="tgl_body">
+              <span class="tgl_switch"></span>
+                <span class="tgl_track">
+                <span class="tgl_bgd"></span>
+                <span class="tgl_bgd tgl_bgd-on"></span>
+                </span>
+                </span>
+            </label>
+        </div>
+        {{> afFormGroup name='title' label='Primary Heading'}} {{> afFormGroup name='subheading' label='Secondary Heading'}} {{> afFormGroup name='image' label='Background Image'}} {{> afFormGroup name='extraHtml' label='Extra HTML'}} {{> afFormGroup name='extraCss' label='Extra CSS'}}
+        <div>
+            <button type="submit" class="ui right red floated button">Save</button>
+        </div>
+        {{/autoForm}} {{/if}}
+    </div>
+</template>
+
+<body>
+    {{#if isAdmin}} {{> jumbotron_config_overlay}} {{/if}}
+</body>
