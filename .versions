@@ -39,7 +39,7 @@ ddp-client@1.2.1
 ddp-common@1.2.1
 ddp-rate-limiter@1.0.0
 ddp-server@1.2.1
-decent10cs:telescope-jumbotron@0.0.8
+decent10cs:telescope-jumbotron@0.0.9
 deps@1.0.9
 diff-sequence@1.0.1
 djedi:sanitize-html@1.10.0
