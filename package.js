@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'biolog:telescope-jumbotron',
+  name: 'decent10cs:telescope-jumbotron',
   summary: 'A configurable Jumbotron for Telescope.',
   version: '0.1.0',
   git: ''
