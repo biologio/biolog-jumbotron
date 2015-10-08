@@ -1,6 +1,6 @@
-# Telescope Hero Banner Plugin
+# Telescope Jumbotron Plugin
 
-A simple plugin that lets you add a configurable hero banner to your [Telescope][1] site.  
+A simple plugin that lets you add a configurable Jumbotron to your [Telescope][1] site.  
 
 Example: http://telescope-hero.meteor.com (you get exactly what you see there simply by adding this package)
 
@@ -8,7 +8,7 @@ Example: http://telescope-hero.meteor.com (you get exactly what you see there si
 ## Install
 
 ```bash
-meteor add jeremy:telescope-plugin-hero
+meteor add biolog:telescope-jumbotron
 ```
 
 
@@ -21,8 +21,8 @@ Note that any styles entered in the custom CSS box can effect the site globally,
 If you'd like to customize the hero with your own CSS, the markup essentially looks like this...
 
 ```html
-<section class="hero" style="background-image: url('Hero image URL')">
-  <div class="hero-inner">
+<section class="jumbotron" style="background-image: url('Hero image URL')">
+  <div class="jumbotron-inner">
     <div class="copy">
       <h1>Main Heading</h1>
       <h3>Secondary Heading</h3>
