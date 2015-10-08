@@ -8,7 +8,7 @@ Example: http://invent.healthcare.meteor.com/ (you get exactly what you see ther
 ## Install
 
 ```bash
-meteor add biolog:telescope-jumbotron
+meteor add decent10cs:telescope-jumbotron
 ```
 
 
