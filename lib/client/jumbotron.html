@@ -11,7 +11,11 @@
         <section class="jumbotron" style="background-image: url('{{image}}')">
             <div class="jumbotron-inner">
                 <div class="copy">
-                    <h1>{{title}}</h1>
+                    {{#if titleImage}}
+                    <img src="{{titleImage}}" alt="{{title}}">
+                    {{else}}
+                     {{title}}
+                    {{/if}}
                     <h3>{{subheading}}</h3> {{{extraHtml}}}
                 </div>
             </div>
@@ -36,7 +40,9 @@
                 </span>
             </label>
         </div>
-        {{> afFormGroup name='title' label='Primary Heading'}} {{> afFormGroup name='subheading' label='Secondary Heading'}} {{> afFormGroup name='image' label='Background Image'}} {{> afFormGroup name='extraHtml' label='Extra HTML'}} {{> afFormGroup name='extraCss' label='Extra CSS'}}
+        {{> afFormGroup name='title' label='Primary Heading'}} {{> afFormGroup name='titleImage' label='Title Image'}}
+    {{> afFormGroup name='subheading' label='Secondary Heading'}}
+         {{> afFormGroup name='image' label='Background Image'}} {{> afFormGroup name='extraHtml' label='Extra HTML'}} {{> afFormGroup name='extraCss' label='Extra CSS'}}
         <div>
             <button type="submit" class="ui right red floated button">Save</button>
         </div>

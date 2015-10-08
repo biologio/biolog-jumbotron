@@ -110,8 +110,8 @@ routepolicy@1.0.6
 sacha:spin@2.3.1
 sanjo:meteor-files-helpers@1.1.0_7
 sanjo:meteor-version@1.0.0
-semantic:ui-card@1.9.3
-semantic:ui-sidebar@1.9.2
+semantic:ui-card@2.1.4
+semantic:ui-sidebar@2.1.4
 service-configuration@1.0.5
 session@1.1.1
 sha@1.0.4

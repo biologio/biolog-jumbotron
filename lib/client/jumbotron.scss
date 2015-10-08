@@ -288,7 +288,7 @@ $switch-bg: #2da86c;
 }
 
 .jumbotron .jumbotron-inner {
-    background: rgba(0, 0, 0, 0.1);
+    background: transparent;
     position: relative;
     min-height: 350px !important;
 }
@@ -434,4 +434,7 @@ a.expand {
 .floated.right{
     float:right
     
+}
+#cardList .overlay-image a.expand {
+    color: #fff !important;
 }
