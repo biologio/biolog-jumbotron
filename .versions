@@ -33,13 +33,14 @@ chuangbo:marked@0.3.5_1
 cmather:handlebars-server@2.0.0
 coffeescript@1.0.10
 cosmos:browserify@0.5.1
+cwaring:modernizr@3.0.0_1
 dburles:collection-helpers@1.0.3
 ddp@1.2.2
 ddp-client@1.2.1
 ddp-common@1.2.1
 ddp-rate-limiter@1.0.0
 ddp-server@1.2.1
-decent10cs:telescope-jumbotron@0.0.9
+decent10cs:telescope-jumbotron@0.0.95
 deps@1.0.9
 diff-sequence@1.0.1
 djedi:sanitize-html@1.10.0

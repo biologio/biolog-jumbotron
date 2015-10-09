@@ -25,8 +25,8 @@ Note that any styles entered in the custom CSS box can effect the site globally,
 If you'd like to customize the Jumbotron with your own CSS, the markup essentially looks like this...
 
 ```html
-<section class="jumbotron" style="background-image: url('Hero image URL')">
-  <div class="jumbotron-inner">
+<section class="telescope-jumbotron" style="background-image: url('Hero image URL')">
+  <div class="telescope-jumbotron-inner">
     <div class="copy">
       <h1>Main Heading</h1>
       <h3>Secondary Heading</h3>

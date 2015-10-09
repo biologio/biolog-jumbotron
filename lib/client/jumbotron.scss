@@ -7,7 +7,7 @@ body {
 http://cloudline.io.s3.amazonaws.com/images/outer-space-hd-wallpaper.jpg
 */
 
-.jumbotron-container {
+.telescope-jumbotron-container {
     position: relative;
     .sidebar-toggle {
         position: absolute;
@@ -29,7 +29,7 @@ http://cloudline.io.s3.amazonaws.com/images/outer-space-hd-wallpaper.jpg
     }
 }
 
-.jumbotron {
+.telescope-jumbotron {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -39,7 +39,7 @@ http://cloudline.io.s3.amazonaws.com/images/outer-space-hd-wallpaper.jpg
     overflow-x: none;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .35);
     margin: -10px 0 40px 0;
-    .jumbotron-inner {
+    .telescope-jumbotron-inner {
         position: relative;
     }
     .copy {
@@ -230,12 +230,12 @@ $switch-bg: #2da86c;
     }
 }
 
-.jumbotron {
+.telescope-jumbotron {
     overflow: none;
     margin-bottom: 0;
 }
 
-.jumbotron .copy .button {
+.telescope-jumbotron .copy .button {
 
     color: #fff;
     font-size: 1.8em;
@@ -266,22 +266,22 @@ $switch-bg: #2da86c;
     transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
-.jumbotron .copy {
+.telescope-jumbotron .copy {
     top: 18%;
 }
 
-.jumbotron .copy .button:hover {
+.telescope-jumbotron .copy .button:hover {
     color: #fff;
 }
 
-.jumbotron .learn-more {
+.telescope-jumbotron .learn-more {
     font-size: 1.5em;
     font-weight: 300;
 }
 
 
 
-.jumbotron .learn-more a {
+.telescope-jumbotron .learn-more a {
     outline: none;
     color: #fff;
     font-size: 1.1em;
@@ -289,7 +289,7 @@ $switch-bg: #2da86c;
     text-decoration: none;
 }
 
-.jumbotron .jumbotron-inner {
+.telescope-jumbotron .telescope-jumbotron-inner {
     background: transparent;
     position: relative;
     min-height: 350px !important;
@@ -300,7 +300,7 @@ $switch-bg: #2da86c;
     color: #000;
 }
 
-.jumbotron .copy .button {
+.telescope-jumbotron .copy .button {
     margin: 1rem auto;
     background-color: rgba(33, 133, 210, 0.38); 
     border: none;
