@@ -212,9 +212,10 @@ $switch-bg: #2da86c;
             font-weight: normal;
             margin-bottom: 5px;
         }
-        .label.blue {
+        .ui.label.blue {
             background-color: #2EBAE8 !important;
             border-color: rgba(88, 203, 241, 0.72) !important;
+            color:#fff;
             &:hover {
                 background-color: #0AB5EC !important;
                 border-color: #07A3D6 !important;
@@ -440,3 +441,20 @@ a.expand {
 #cardList .overlay-image a.expand {
     color: #fff !important;
 }
+.ui.label {
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 1;
+    vertical-align: baseline;
+    margin: 0em 0.14285714em;
+    background-color: #e8e8e8;
+    border-color: #e8e8e8;
+    background-image: none;
+    padding: 0.4833em 0.433em;
+    color: rgba(0, 0, 0, 0.6);
+    text-transform: none;
+    font-weight: bold;
+    border-radius: 4px;
+    -webkit-transition: background 0.1s ease;
+    transition: background 0.1s ease;
+   
