@@ -1,7 +1,7 @@
 Package.describe({
   name: 'decent10cs:telescope-jumbotron',
   summary: 'A configurable Jumbotron for Telescope.',
-  version: '0.1.1_1',
+  version: '0.1.1_2',
   git: 'https://github.com/biologio/biolog-jumbotron.git'
 });
 
